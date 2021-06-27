@@ -29,7 +29,7 @@
 						<li class="nav-item"><a class="nav-link" href="{{ route('memberList',[1]) }}">Honor Board</a></li>
 						<li class="nav-item"><a class="nav-link" href="{{ route('memberList',[2]) }}">Members</a></li>
 						<li class="nav-item"><a class="nav-link" href="{{ route('socialActivity') }}">Social Activities</a></li>
-						<li class="nav-item"><a class="nav-link" href="donor-list.html">Donor</a></li>
+						<li class="nav-item"><a class="nav-link" href="{{ route('memberList',[3]) }}">Donor</a></li>
 						<li class="nav-item"><a class="nav-link" href="{{ route('notice') }}">Notice</a></li>
 						<li class="nav-item"><a class="nav-link" href="{{ route('photoGallery') }}">Photo Gallery</a></li>
 						<li class="nav-item">

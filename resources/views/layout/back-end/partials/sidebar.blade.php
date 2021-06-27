@@ -138,6 +138,9 @@
                         <li>
                             <a href="{{ route('members.home',[2]) }}">Member</a>
                         </li>
+                        <li>
+                            <a href="{{ route('members.home',[3]) }}">Donor</a>
+                        </li>
                       
                     </ul>
                 </li>

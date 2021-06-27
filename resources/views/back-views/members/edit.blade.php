@@ -43,6 +43,17 @@
                             </select>                          
                         </div>   
                 </div>
+                @if($details)
+                    
+                
+                   {{-- for donor --}}
+                   <div class="from-group" id="donor" style="display: none;">
+                    <div class="col-md-12">
+                        <label class="col-12" for="example-text-input"> Address</label>
+                        <textarea type="text"  class="form-control" cols="4" rows="6" name="address" placeholder="Text..">{{ $details->presentAddress }}</textarea>
+                    </div>
+                </div>
+              
                     {{-- For member  --}}
                     <div class="form-group " style="display: none;" id="member"  >
                         <div class="row">
@@ -73,6 +84,7 @@
                             </div>
                         </div>
                     </div>
+                    @endif
                 <div class="form-group">
                     <div class="col-12">
                        <label class="col-12" for="example-text-input">Designation</label>
@@ -118,10 +130,12 @@
     window.onload = function() {
         var eSelect = document.getElementById('selector');
         var optOtherReason = document.getElementById('member');
-        
+        var optDonor = document.getElementById('donor');
+     
             if(eSelect.selectedIndex === 2) {
                 optOtherReason.style.display = 'block';
             } else {
+                optDonor.style.display = 'block';
                 optOtherReason.style.display = 'none';
             }
         

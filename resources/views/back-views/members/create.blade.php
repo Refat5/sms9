@@ -36,13 +36,21 @@
                             <option value="0">Ec Committee Member </option>
                             <option value="1">Honor Board Member </option>
                             <option id="option" class="member" value="2"> Members</option>
-                            <option value="3">Donar </option>
+                            <option value="3" id="option">Donar </option>
 
                             </select>                          
                         </div>
                   
                     
                 </div>
+                {{-- for donor --}}
+                <div class="from-group" id="donor" style="display: none;">
+                    <div class="col-md-12">
+                        <label class="col-12" for="example-text-input"> Address</label>
+                        <textarea type="text"  class="form-control" cols="4" rows="6" name="address" placeholder="Text.."></textarea>
+                    </div>
+                </div>
+              
                 {{-- For member  --}}
                 <div class="form-group " style="display: none;" id="member"  >
                     <div class="row">
@@ -118,11 +126,19 @@
     window.onload = function() {
         var eSelect = document.getElementById('selector');
         var optOtherReason = document.getElementById('member');
+        var optionDonor = document.getElementById('donor');
+
         eSelect.onchange = function() {
             if(eSelect.selectedIndex === 2) {
                 optOtherReason.style.display = 'block';
+                optionDonor.style.display = 'none';
+            }
+            else if(eSelect.selectedIndex == 3){
+                optionDonor.style.display = 'block';
+                optOtherReason.style.display = 'none';
             } else {
                 optOtherReason.style.display = 'none';
+                optionDonor.style.display = 'none';
             }
         }
     }

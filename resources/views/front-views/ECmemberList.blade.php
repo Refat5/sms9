@@ -26,7 +26,8 @@
                 <h1 class="font-30">List Of Honor Board </h1>
                 @elseif(Request::is('list/2'))
                 <h1 class="font-30">List Of Members </h1>
-
+               @else
+               <h1 class="font-30">List Of Donor </h1>
 
                 @endif
 					
@@ -37,6 +38,9 @@
 							<thead>
 								<tr>
 									<th>Member Id</th>
+                                    @if(Request::is('list/3'))
+                                        <th>Profile</th>
+                                    @endif
 									<th>Name</th>
                                     @if(Request::is('list/0'))
                                     <th>Designation</th>
@@ -70,6 +74,17 @@
             </div>
             <div>
                 <strong>Name : </strong> {{ $member->name }} <br>
+                @if($member->type == 3)
+                <div class="modal-body-heading">
+                     Address
+                </div>
+                <div>
+                    <address>
+                        {{  $member->details? $member->details['presentAddress'] : 'null' }}
+                    </address>
+                </div>
+                    
+                @endif
                 @if(Request::is('list/2'))
                 <strong>Father Name : </strong> {{ $member->details['father'] }} <br>
 
@@ -114,6 +129,12 @@
   </div>
                                 <tr>
 									<td>{{ $member->id }}</td>
+                                    @if($member->type == 3)
+                                    <td>
+                                        <img src="\{{$member->image}}" alt="user" width="100" height="90" style="border-radius: 50%;">
+
+                                    </td>
+                                    @endif
 									<td>
 										<span data-toggle="modal" data-target="#memberModal{{ $member->id }}" class="member-view-details">{{ $member->name }}</span>
 									</td>
