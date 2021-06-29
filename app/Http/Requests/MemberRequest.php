@@ -25,7 +25,7 @@ class MemberRequest extends FormRequest
     {
         return [
             'name'        => 'required',
-            'image'       => 'required',
+            // 'image'       => 'required',
             'designation' => 'required',
 
         ];

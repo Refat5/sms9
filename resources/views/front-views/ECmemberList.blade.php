@@ -67,7 +67,7 @@
         </div>
         <div class="modal-body">
             <div class="img-box text-center">
-                <img src="{{ $member->image ? '/'.$member->image : 'assets/front-end/img/blank.png' }}" alt="user" class="img-fluid" width="250" >
+                <img src="{{ $member->image ? '/'.$member->image : '/assets/front-end/img/blank.png' }}" alt="user" class="img-fluid" width="250" >
             </div>
             <div class="modal-body-heading">
                 Name

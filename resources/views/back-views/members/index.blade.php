@@ -36,7 +36,7 @@
               
                 <td class="text-center"><img style="width: 104px;
                     height: 102px;
-                    border-radius: 50%;" src="/{{$data->image}}"></td>  
+                    border-radius: 50%;" src="/{{$data->image? $data->image : 'assets/front-end/img/blank.png'}}"></td>  
               @if(Request::is('admin/members/list/2'))
               <td> {{ $data->details? $data->details['phone']: 'Null' }}</td>
               @else

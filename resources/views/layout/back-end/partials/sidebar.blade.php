@@ -26,7 +26,7 @@
                 <div class="content-header-item">
                     <a class="link-effect font-w700" href="{{ route('admin') }}">
                         <i class="si si-fire text-primary"></i>
-                        <span class="font-size-xl text-dual-primary-dark">SMS</span><span class="font-size-xl text-primary">92</span>
+                        <span class="font-size-xl text-dual-primary-dark">SAMS</span><span class="font-size-xl text-primary">92</span>
                     </a>
                 </div>
                 <!-- END Logo -->

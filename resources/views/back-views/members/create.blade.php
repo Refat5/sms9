@@ -102,7 +102,7 @@
                                     </div>
                                 </center>
                                 <label for="profile_photo" class="control-label">Member Image*</label>
-                                <input type="file" required class="form-control" id="previmage" name="image" onchange="readURL(this);">
+                                <input type="file"  class="form-control" id="previmage" name="image" onchange="readURL(this);">
                            
                        
                     </div>

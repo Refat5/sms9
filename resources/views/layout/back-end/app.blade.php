@@ -45,6 +45,17 @@
     </head>
     <body>
         <style>
+            #main-container {
+                min-height: 400.125px;
+                color: white;
+                background: linear-gradient( 
+38deg
+ , rgb(6, 82, 6) 50%, rgb(186 26 32) 73%) center center / cover !important;
+            }           
+             .img-avatar.img-avatar32 {
+                    width: 88px;
+                    height: 91px;
+                }
             .header_search_on{
                 display: none !important;
             }

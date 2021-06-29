@@ -19,58 +19,49 @@
 			<div class="col-lg-7 text-center">
 				<div class="main-title">
 					<h1>About Us</h1>
-					{!! $limit !!}
+					
 				</div>
+                {!! $limit !!}
 			</div>
 		</div>
-		<div class="projects_inner row grid">
-			<div class="grid-sizer col-sm-6 col-md-3 col-lg-3"></div>
-			<div class="col-lg-6 col-sm-6 col-sm-12 brand grid-item">
-				<div class="projects_item">
-                    @php($photo = \App\Models\PhotoGallery::orderBy('id','desc')->where('status', 1)->get());
-
-                    
-					<img class="img-fluid w-100" src="{{ asset('assets/front-end/img/12.jpg')}}" alt="">
-				</div>
-			</div>
-			<div class="col-lg-3 col-sm-6 col-sm-12 brand work grid-item">
-				<div class="projects_item">
-					<img class="img-fluid w-100" src="{{ asset('assets/front-end/img/19.jpg')}}" alt="">
-				</div>
-			</div>
-			<div class="col-lg-3 col-sm-6 work grid-item">
-				<div class="projects_item">
-					<img class="img-fluid w-100" src="{{ asset('assets/front-end/img/34.jpg')}}" alt="">
-				</div>
-			</div>
-			<div class="col-lg-6 col-sm-6 brand work grid-item">
-				<div class="projects_item">
-					<img class="img-fluid w-100" src="{{ asset('assets/front-end/img/35.jpg')}}" alt="">
-				</div>
-			</div>
-			<div class="col-lg-6 col-sm-6 brand prohject grid-item">
-				<div class="projects_item">
-					<img class="img-fluid w-100" src="{{ asset('assets/front-end/img/30.jpg')}}" alt="">
-				</div>
-			</div>
-			<div class="col-lg-6 col-sm-6 brand work prohject grid-item">
-				<div class="projects_item">
-					<img class="img-fluid w-100" src="{{ asset('assets/front-end/img/30.jpg')}}" alt="">
-				</div>
-			</div>
-			<div class="col-lg-3 col-sm-6 brand work prohject grid-item">
-				<div class="projects_item">
-					<img class="img-fluid w-100" src="{{ asset('assets/front-end/img/36.jpg')}}" alt="">
-				</div>
-			</div>
-			<div class="col-lg-3 col-sm-6 brand work prohject grid-item">
-				<div class="projects_item">
-					<img class="img-fluid w-100" src="{{ asset('assets/front-end/img/35.jpg')}}" alt="">
-				</div>
-			</div>
-		</div>
+		
 	</div>
 </section>
+
+<section class="gallery-area section_gap gray-bg">
+    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">              
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <img src="" class="imagepreview" style="width: 100%;" >
+            </div>
+          </div>
+        </div>
+      </div>
+	<div class="container">
+        <div class="main-title">
+            <h1>Our Photo</h1>
+            
+        </div>
+		<div class="portfolio">
+            
+	
+                    @php($photos = \App\Models\PhotoGallery::orderBy('id','desc')->where('status',1)->take(8)->get())
+            @foreach ($photos as $photo)
+            <a href="javascript:void(0)" class="card pop">
+			    <div class="image" style=" padding:46px;">
+                    <img src="{{ $photo->image }}" alt="" />
+			    </div>
+			</a>
+            @endforeach     
+
+		</div>
+        <a class="btn btn-secondary mt-3" style="margin-left: 100%;" href="{{ route('photoGallery') }}"> View All</a>
+
+	</div>
+</section>
+
 
 <!-- Video Area -->
 <section class="home-video-area bg-white py-5">
@@ -89,3 +80,14 @@
 
     
 @endsection
+
+@push('script')
+<script>
+    $(function() {
+		$('.pop').on('click', function() {
+			$('.imagepreview').attr('src', $(this).find('img').attr('src'));
+			$('#imagemodal').modal('show');   
+		});		
+});
+</script>
+@endpush

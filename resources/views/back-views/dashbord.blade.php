@@ -4,10 +4,13 @@
            <!-- Main Container -->
            <main id="main-container">
             <!-- Page Content -->
-            <center class="mt-5">
-                <h1>Welcome To</h1>
-                
-                <span class="font-size-xl text-dual-primary-dark">SMS</span><span class="font-size-xl text-primary">92</span>
+            <center class="" style="margin-top: 184px;">
+                <h1 style="font-size: 70px; font-weight:bold; color:white;">Welcome To</h1>
+               <h2 style="font-size: 40px; font-width:bold;color: rgb(241 72 78); font-weigth:bold;">
+                SAMS &nbsp <span style="color: white; font-size:70px;">92</span> 
+
+            </h2> 
+            <a href="/" class="btn btn-primary" target="_blank"> Visit Front End</a>
 
             {{-- <div class="content">
                 <div class="row invisible" data-toggle="appear">
