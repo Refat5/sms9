@@ -40,6 +40,11 @@ class HomeController extends Controller
 
     }
 
+    public function allPdf()
+    {
+        return view('front-views.pdfDownload');
+    }
+
     public function photoGallery()
     {
         return view('front-views.photoGallery');

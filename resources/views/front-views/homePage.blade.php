@@ -13,10 +13,10 @@
 </section>
 
 
-<section class="section_gap portfolio_area" id="work">
+<section class=" mt-5 portfolio_area" id="work">
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-lg-7 text-center">
+			<div class="col-lg-7 text-justify">
 				<div class="main-title">
 					<h1>About Us</h1>
 					
@@ -28,7 +28,7 @@
 	</div>
 </section>
 
-<section class="gallery-area section_gap gray-bg">
+<section class="gallery-area mt-5 gray-bg">
     <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">              
@@ -41,7 +41,7 @@
       </div>
 	<div class="container">
         <div class="main-title">
-            <h1>Our Photo</h1>
+            <h1>Photo Gallary</h1>
             
         </div>
 		<div class="portfolio">

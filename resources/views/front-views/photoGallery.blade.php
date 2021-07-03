@@ -1,4 +1,14 @@
 @extends('layout.front-end.app')
+@push('css')
+ <style>
+     .banner_area .banner_inner{
+        min-height: 225px !important;
+     }
+     .banner_area{
+        min-height: 274px;
+     }
+ </style>
+@endpush
 @section('content')
 <section class="banner_area">
 	<div class="banner_inner d-flex align-items-center">
@@ -15,7 +25,7 @@
 </section>
 
 
-<section class="gallery-area section_gap gray-bg">
+<section class="gallery-area  gray-bg">
     <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">              
@@ -27,6 +37,10 @@
         </div>
       </div>
 	<div class="container">
+        <div class="main-title">
+           
+            <h1 class="font-30">Photo Gallery</h1>
+        </div>
 		<div class="portfolio">
 	
                     @php($photos = \App\Models\PhotoGallery::orderBy('id','desc')->where('status',1)->get())

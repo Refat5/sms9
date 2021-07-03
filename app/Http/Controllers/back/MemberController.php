@@ -46,7 +46,7 @@ class MemberController extends Controller
 
         $members->fill($requested_data)->save();
 
-        if ($request->type == 2 || $request->type == 3) {
+        if ($request->type == 2 || $request->type == 3 || $request->type == 1) {
 
             $member = new MemberDetails();
             $member->member_id = $members->id;
@@ -58,6 +58,7 @@ class MemberController extends Controller
 
             $member->permanentAddress = $request->permanentAddress;
             $member->phone = $request->phone;
+            $member->period = $request->period;
 
             $member->save();
 

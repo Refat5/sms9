@@ -14,6 +14,7 @@ class Member extends Model
         'name',
         'image',
         'designation',
+        'member_id',
         'type',
 
     ];

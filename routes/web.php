@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\back\MemberController;
 use App\Http\Controllers\back\MessagesController;
+use App\Http\Controllers\back\PdfDownloadController;
 use App\Http\Controllers\back\PhotoGalleryController;
 use App\Http\Controllers\back\ServiceController;
 use App\Http\Controllers\back\SettingController;
@@ -26,6 +27,8 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/aboutUs', [HomeController::class, 'aboutUs'])->name('aboutUs');
+Route::get('/pdf', [HomeController::class, 'allPdf'])->name('allPdf');
+
 Route::get('/notice', [HomeController::class, 'notice'])->name('notice');
 Route::get('/photo', [HomeController::class, 'photoGallery'])->name('photoGallery');
 Route::get('/socialActivity', [HomeController::class, 'socialActivity'])->name('socialActivity');
@@ -65,6 +68,18 @@ Route::group(['prefix' => 'admin'], function () {
 
     });
 
+    Route::group(['prefix' => 'pdf'], function () {
+        Route::get('/', [PdfDownloadController::class, 'index'])->name('pdf.home');
+        Route::get('create/{id}', [PdfDownloadController::class, 'show'])->name('pdf.show');
+
+        Route::get('create', [PdfDownloadController::class, 'create'])->name('pdf.create');
+        Route::post('store', [PdfDownloadController::class, 'store'])->name('pdf.store');
+        Route::get('status/{id}', [PdfDownloadController::class, 'status'])->name('pdf.status');
+        Route::get('edit/{id}', [PdfDownloadController::class, 'edit'])->name('pdf.edit');
+        Route::put('update/{id}', [PdfDownloadController::class, 'update'])->name('pdf.update');
+        Route::delete('delete/{id}', [PdfDownloadController::class, 'destroy'])->name('pdf.delete');
+
+    });
     Route::group(['prefix' => 'socialActivite', 'as' => 'socialActivite.'], function () {
         Route::get('/', [SocialActivitesController::class, 'index'])->name('home');
 

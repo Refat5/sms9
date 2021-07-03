@@ -18,6 +18,12 @@
 
 </head>
 <body>
+    <style>
+        .main-title h1 {
+            text-transform: inherit;
+        }
+    </style>
+    @stack('css')
 
 @include('layout.front-end.partials.header')
 <!-- Banner Area -->

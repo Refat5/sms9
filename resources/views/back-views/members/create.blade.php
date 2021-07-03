@@ -41,14 +41,39 @@
                             </select>                          
                         </div>
                   
-                    
+                      
                 </div>
-                {{-- for donor --}}
-                <div class="from-group" id="donor" style="display: none;">
-                    <div class="col-md-12">
-                        <label class="col-12" for="example-text-input"> Address</label>
-                        <textarea type="text"  class="form-control" cols="4" rows="6" name="address" placeholder="Text.."></textarea>
+      
+                <div class="form-group " id="member_id" style="display: block;>
+                    <div class="col-12">
+                       <label class="col-12" for="example-text-input">MID</label>
+                       <input type="text"  class="form-control" id="example-text-input" name="member_id" placeholder="id..">
+                       
                     </div>
+                     {{-- for honor board --}}
+                     <div class="from-group" id="honor" style="display: none;">
+                        <div class="row">
+                           
+                             <div class="col-md-12">
+                                <label class="col-12" for="example-text-input"> Period</label>
+                        <input type="text"  class="form-control"   name="period" placeholder="period..">
+                             </div>
+                        </div>
+                      
+                       </div>
+               
+                       
+                {{-- for donor --}}
+                <div class="from-group " id="donor" style="display: none;">
+                    <div class="row">
+                        
+                        <div class="col-md-12">
+                            <label class="col-12" for="example-text-input"> Address</label>
+                            <textarea type="text"  class="form-control" cols="4" rows="6" name="address" placeholder="Text.."></textarea>
+                        </div>
+                      
+                    </div>
+                  
                 </div>
               
                 {{-- For member  --}}
@@ -107,7 +132,7 @@
                        
                     </div>
                 </div>
-              
+            </div>  
                 <div class="form-group row">
                     <div class="col-12">
                         <button type="submit" class="btn btn-alt-primary">save</button>
@@ -127,18 +152,37 @@
         var eSelect = document.getElementById('selector');
         var optOtherReason = document.getElementById('member');
         var optionDonor = document.getElementById('donor');
+        var optionmember_id = document.getElementById('member_id');
+        var optionHonor = document.getElementById('honor');
+
+
 
         eSelect.onchange = function() {
             if(eSelect.selectedIndex === 2) {
                 optOtherReason.style.display = 'block';
                 optionDonor.style.display = 'none';
+                optionmember_id.style.display = 'block';
+                optionHonor.style.display = 'none';
+            }
+            else if(eSelect.selectedIndex == 1){
+                optionDonor.style.display = 'none';
+                optOtherReason.style.display = 'none';
+                optionmember_id.style.display = 'block';
+                optionHonor.style.display = 'block';
             }
             else if(eSelect.selectedIndex == 3){
                 optionDonor.style.display = 'block';
                 optOtherReason.style.display = 'none';
+                optionmember_id.style.display = 'none';
+                optionHonor.style.display = 'none';
+
             } else {
                 optOtherReason.style.display = 'none';
                 optionDonor.style.display = 'none';
+                optionmember_id.style.display = 'block';
+                optionHonor.style.display = 'none';
+
+
             }
         }
     }

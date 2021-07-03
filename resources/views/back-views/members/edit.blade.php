@@ -43,16 +43,38 @@
                             </select>                          
                         </div>   
                 </div>
-                @if($details)
-                    
-                
-                   {{-- for donor --}}
-                   <div class="from-group" id="donor" style="display: none;">
-                    <div class="col-md-12">
-                        <label class="col-12" for="example-text-input"> Address</label>
-                        <textarea type="text"  class="form-control" cols="4" rows="6" name="address" placeholder="Text..">{{ $details->presentAddress }}</textarea>
+                <div class="form-group" id="member_id">
+                    <div class="col-12">
+                       <label class="col-12" for="example-text-input">MID</label>
+                       <input type="text"  class="form-control" id="example-text-input" name="member_id" value="{{ $members->member_id }}" placeholder="id..">
+                       
                     </div>
                 </div>
+                @if($details)
+                    
+                {{-- for honor board --}}
+                <div class="from-group" id="honor" style="display: none;">
+                    <div class="row">
+                       
+                         <div class="col-md-12">
+                            <label class="col-12" for="example-text-input"> Period</label>
+                    <input type="text"  class="form-control" value="{{ $details->period }}"  name="period" placeholder="period..">
+                         </div>
+                    </div>
+                  
+                   </div>
+  
+                   {{-- for donor --}}
+                   <div class="from-group" id="donor" style="display: none;">
+                    <div class="row">
+                       
+                         <div class="col-md-12">
+                            <label class="col-12" for="example-text-input"> Address</label>
+                            <textarea type="text"  class="form-control" cols="4" rows="6" name="address" placeholder="Text..">{{ $details->presentAddress }}</textarea>
+                         </div>
+                    </div>
+                  
+                   </div>
               
                     {{-- For member  --}}
                     <div class="form-group " style="display: none;" id="member"  >
@@ -131,12 +153,22 @@
         var eSelect = document.getElementById('selector');
         var optOtherReason = document.getElementById('member');
         var optDonor = document.getElementById('donor');
+        var member_id = document.getElementById('member_id');
+        var honor = document.getElementById('honor');
+
+
      
             if(eSelect.selectedIndex === 2) {
                 optOtherReason.style.display = 'block';
-            } else {
+            }
+            else if(eSelect.selectedIndex === 1){
+                   honor.style.display = 'block';
+            }
+            else {
                 optDonor.style.display = 'block';
                 optOtherReason.style.display = 'none';
+                member_id.style.display = 'none';
+
             }
         
     }
