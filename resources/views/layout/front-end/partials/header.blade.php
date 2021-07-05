@@ -8,8 +8,8 @@
 					<img src="{{ asset('assets/front-end/img/logo.jpg')}}" alt="">
 				
 				</a>
-                <div class="logo-slogan" style="width: 190px;
-                font-size: 130%;
+                <div class="logo-slogan" style="width: 195px;
+                font-size: 114%;
                 color: rgb(34, 33, 33);">
                     
                     @php($config=\App\Helpers\Helper::get_app_settings('appAddress'))

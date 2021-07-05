@@ -94,6 +94,7 @@ class MemberController extends Controller
 
         $data = Member::findOrFail($id);
         $formData = $request->all();
+      
 
         if ($request->hasFile('image')) {
             Helper::delete($data->image);
@@ -105,7 +106,11 @@ class MemberController extends Controller
         }
 
         $data->fill($formData)->save();
-        $data->details->update($formData);
+         if($data->details){
+            $data->details->update($formData);
+
+         }
+        
 
         Toastr::success('update Successfully');
         return redirect()->back();

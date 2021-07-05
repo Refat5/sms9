@@ -19,6 +19,9 @@
 </head>
 <body>
     <style>
+        .main-title{
+            margin-bottom: 29px;
+        }
         .main-title h1 {
             text-transform: inherit;
         }

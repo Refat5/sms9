@@ -53,7 +53,7 @@
                             <img src="{{ asset('assets/front-end/img/logo.jpg')}}" width="50" height="50">
 
                         </a>
-                        <h1 class="h2 font-w700 mt-50 mb-10">Welcome to Your Admin</h1>
+                        <h1 class="h2 font-w700 mt-50 mb-10">Welcome to Sams92</h1>
                         <h2 class="h4 font-w400 text-muted mb-0">Please Log In</h2>
                     </div>
                     <!-- END Header -->

@@ -54,7 +54,7 @@
                 @elseif(Request::is('list/2'))
                 <h1 class="font-30">List of Members </h1>
                @else
-               <h1 class="font-30">List of Donor </h1>
+               <h1 class="font-30">List of Donors </h1>
 
                 @endif
 					
@@ -65,7 +65,7 @@
 							<thead>
 								<tr>
                                     @if(Request::is('list/0') || Request::is('list/1') || Request::is('list/2') )
-                                    <th>Member Id</th>
+                                    <th>Member ID</th>
                                     @endif
                                     
 									

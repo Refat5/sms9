@@ -1,4 +1,15 @@
 @extends('layout.front-end.app')
+@push('css')
+<style>
+      .banner_area .banner_inner{
+        min-height: 225px !important;
+     }
+     .banner_area{
+        min-height: 274px;
+     }
+</style>
+    
+@endpush
 @section('content')
 <section class="banner_area">
 	<div class="banner_inner d-flex align-items-center">
@@ -14,7 +25,7 @@
 	</div>
 </section>
 
-<section class="social-activites-area section_gap gray-bg">
+<section class="social-activites-area  gray-bg">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 m-auto">

@@ -33,18 +33,21 @@
 					<div class="info_item">
 						<i class="fa fa-home"></i>
 						<h6 class="mb-3">
-							Malikanda, Dohar<br>
-							Dhaka, Bangladesh <br>
-							Gov: Da-09423
+                            @php($config=\App\Helpers\Helper::get_app_settings('appAddress'))
+                            @php($phone=\App\Helpers\Helper::get_app_settings('appPhone'))
+                            @php($email=\App\Helpers\Helper::get_app_settings('appEmail'))
+
+
+						{{ $config['name'] }}
 						</h6>
 					</div>
 					<div class="info_item mb-3">
 						<i class="fa fa-phone"></i>
-						<h6><a href="#">+8801923890110</a></h6>
+						<h6><a href="#">{{ $phone['name'] }}</a></h6>
 					</div>
 					<div class="info_item">
 						<i class="fa fa-envelope"></i>
-						<h6><a href="#">info@gmail.com</a></h6>
+						<h6><a href="#">{{ $email['name'] }}</a></h6>
 						<p>Send us your query anytime!</p>
 					</div>
 				</div>

@@ -1,4 +1,4 @@
-<footer class="footer_area py-1">
+<footer class="footer_area">
 	<div class="container">
 		<div class="row footer_inner justify-content-center">
 			<div class="col-lg-6 text-center">

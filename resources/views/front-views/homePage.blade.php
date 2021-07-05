@@ -28,7 +28,7 @@
 	</div>
 </section>
 
-<section class="gallery-area mt-5 gray-bg">
+<section class="gallery-area  gray-bg">
     <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">              
