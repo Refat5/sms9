@@ -33,7 +33,7 @@ class HomeController extends Controller
     }
     public function member($type)
     {
-        $members = Member::with(['details'])->where('status', 1)->where('type', $type)->get();
+        $members = Member::with(['details'])->where('status', 1)->where('type', $type)->orderBy('priority', 'asc')->get();
         // $details = MemberDetails::where('member_id', $id)->get();
 
         return view('front-views.ECmemberList', compact('members'));

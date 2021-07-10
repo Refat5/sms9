@@ -6,7 +6,18 @@
         <a href="{{route('members.create')}}" >
             <button class="btn btn-success mt-2 mb-2 mr-2" style="float: right ">+ Add New </button>
         </a>
-        <div class="panel-title"><h3>Member List</h3></div>
+        <div class="panel-title">
+            @if(Request::is('admin/members/list/0'))
+            <h3>Executive Committee</h3>
+            @elseif(Request::is('admin/members/list/1'))
+            <h3>Honor Board</h3>
+            @elseif(Request::is('admin/members/list/2'))
+            <h3>Members</h3>
+            @elseif(Request::is('admin/members/list/3'))
+            <h3>Donor</h3>
+            @endif
+          
+
         <div class="panel-options">
            
         </div>
@@ -22,7 +33,7 @@
             @else
             <th>Designtion</th>
             @endif
-        
+            <th>Priority</th>
             <th>Status</th>
             <th>Action</th>
         </tr>
@@ -42,7 +53,7 @@
               @else
               <td> {{ $data->designation }}</td>
               @endif
-           
+           <td>{{ $data->priority}}</td>
                 <td class="text-center">
                     <div
                         class="label {{ $data->status==1 ? 'label-success' : 'label-warning' }}">{{ $data->status == 1 ? 'on' : 'off '}}

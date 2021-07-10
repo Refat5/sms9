@@ -15,6 +15,7 @@ class Member extends Model
         'image',
         'designation',
         'member_id',
+        'priority',
         'type',
 
     ];

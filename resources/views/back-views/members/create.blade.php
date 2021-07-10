@@ -26,10 +26,15 @@
                 <div class="form-group row">
                     
                         <div class="col-md-6">
-                            <label class="col-12" for="example-text-input">Name</label>
+                          
+                            <label class="col-12" for="example-text-input" id="president" style="display: none;">President</label>
+                            
+                            <label class="col-12" for="example-text-input" id="Name"  style="  display: contents;">Name</label>
+                         
                             <input type="text"  class="form-control" id="example-text-input" name="name" placeholder="Text..">
                             
                         </div>
+                    
                         <div class="col-md-6">
                             <label class="col-12" for="example-text-input">Select Member Type</label>
                         <select name="type"  class="form-control" id="selector"  >
@@ -41,7 +46,14 @@
                             </select>                          
                         </div>
                   
-                      
+                        <div class="col-md-12">
+                          
+                            
+                            <label class="col-12" for="example-text-input" >Priority</label>
+                         
+                            <input type="insert Priority"  class="form-control" id="example-text-input" name="priority" placeholder="insert Priority..">
+                            
+                        </div>
                 </div>
       
                 <div class="form-group " id="member_id" style="display: block;>
@@ -108,7 +120,9 @@
                 </div>
              <div class="form-group">
                  <div class="col-12">
-                    <label class="col-12" for="example-text-input">Designation</label>
+                    <label class="col-12" for="example-text-input" id="designation"  style="display: block;">Designation</label>
+                    <label class="col-12" for="example-text-input" id="secretary" style="display: none;"> Secretary</label>
+
                     <input type="text"  class="form-control" id="example-text-input" name="designation" placeholder="Text..">
                     
                  </div>
@@ -154,8 +168,9 @@
         var optionDonor = document.getElementById('donor');
         var optionmember_id = document.getElementById('member_id');
         var optionHonor = document.getElementById('honor');
-
-
+        var secretary = document.getElementById('secretary');
+        var designation = document.getElementById('designation');
+        var president  = document.getElementById('president'); 
 
         eSelect.onchange = function() {
             if(eSelect.selectedIndex === 2) {
@@ -163,29 +178,43 @@
                 optionDonor.style.display = 'none';
                 optionmember_id.style.display = 'block';
                 optionHonor.style.display = 'none';
+                designation.style.display = 'block';
+                secretary.style.display = 'none';
+                president.style.display = 'none';
+
             }
             else if(eSelect.selectedIndex == 1){
                 optionDonor.style.display = 'none';
                 optOtherReason.style.display = 'none';
                 optionmember_id.style.display = 'block';
                 optionHonor.style.display = 'block';
+                secretary.style.display = 'block';
+                designation.style.display = 'none';
+                president.style.display = 'contents';
             }
             else if(eSelect.selectedIndex == 3){
                 optionDonor.style.display = 'block';
                 optOtherReason.style.display = 'none';
                 optionmember_id.style.display = 'none';
                 optionHonor.style.display = 'none';
-
+                designation.style.display = 'block';
+                secretary.style.display = 'none';
+                president.style.display = 'none';
             } else {
                 optOtherReason.style.display = 'none';
                 optionDonor.style.display = 'none';
                 optionmember_id.style.display = 'block';
                 optionHonor.style.display = 'none';
+                designation.style.display = 'block';
+                secretary.style.display = 'none';
+                president.style.display = 'none';
 
 
             }
         }
     }
+  
+
   </script>
     <Script>
 

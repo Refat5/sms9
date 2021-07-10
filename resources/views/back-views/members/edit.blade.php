@@ -32,6 +32,7 @@
                             <input type="text"  class="form-control" id="example-text-input" value="{{ $members->name }}" name="name" placeholder="Text..">
                             
                         </div>
+                       
                         <div class="col-md-6">
                             <label class="col-12"  for="example-text-input">Select Member Type</label>
                         <select name="type" disabled class="form-control" id="selector">
@@ -42,6 +43,14 @@
 
                             </select>                          
                         </div>   
+                        <div class="col-md-12">
+                          
+                            
+                            <label class="col-12" for="example-text-input" >Priority</label>
+                         
+                            <input type="insert Priority"  class="form-control" id="example-text-input" name="priority" value="{{$members->priority}}" placeholder="insert priority id..">
+                            
+                        </div>
                 </div>
                 <div class="form-group" id="member_id">
                     <div class="col-12">

@@ -64,7 +64,7 @@
 						<table class="table table-bordered text-center">
 							<thead>
 								<tr>
-                                    @if(Request::is('list/0') || Request::is('list/1') || Request::is('list/2') )
+                                    @if(Request::is('list/0')  || Request::is('list/2') )
                                     <th>Member ID</th>
                                     @endif
                                     
@@ -166,7 +166,7 @@
     </div>
   </div>
                                 <tr>
-                                    @if($member->type != 3)
+                                    @if($member->type != 3 & $member->type != 1)
                                     <td>{{ $member->member_id ? $member->member_id : 'Null' }}</td>
 
                                     @endif
