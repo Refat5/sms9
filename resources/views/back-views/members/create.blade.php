@@ -51,7 +51,7 @@
                             
                             <label class="col-12" for="example-text-input" >Priority</label>
                          
-                            <input type="insert Priority"  value="1" class="form-control" id="example-text-input" name="priority" placeholder="insert Priority..">
+                            <input type="number"  value="1" class="form-control" id="example-text-input" name="priority" placeholder="insert Priority..">
                             
                         </div>
                 </div>
@@ -59,7 +59,7 @@
                 <div class="form-group " id="member_id" style="display: block;>
                     <div class="col-12">
                        <label class="col-12" for="example-text-input">MID</label>
-                       <input type="text"  class="form-control" id="example-text-input" name="member_id" placeholder="id..">
+                       <input type="number"  class="form-control" id="example-text-input" name="member_id" placeholder="id..">
                        
                     </div>
                      {{-- for honor board --}}
@@ -69,6 +69,10 @@
                              <div class="col-md-12">
                                 <label class="col-12" for="example-text-input"> Period</label>
                         <input type="text"  class="form-control"   name="period" placeholder="period..">
+                             </div>
+                             <div class="col-md-12">
+                                <label for="profile_photo" class="control-label">Secretary Image*</label>
+                                <input type="file"  class="form-control"  name="sec_image" >
                              </div>
                         </div>
                       

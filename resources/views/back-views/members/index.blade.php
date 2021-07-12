@@ -29,7 +29,7 @@
      
             <th>Picture</th>
             @if(Request::is('admin/members/list/2'))
-            <th>Phone</th>
+          
             @endif
             @if(Request::is('admin/members/list/1'))
             <th>Secretary</th>
@@ -37,7 +37,14 @@
             <th>Designtion</th>
             @endif
             <th>Priority</th>
-            <th>Status</th>
+
+            <th>
+                @if(Request::is('admin/members/list/1'))
+                Sec Img
+                @else
+                Status
+                @endif
+            </th>
             <th>Action</th>
         </tr>
         </thead>
@@ -51,16 +58,21 @@
                 <td class="text-center"><img style="width: 104px;
                     height: 102px;
                     border-radius: 50%;" src="/{{$data->image? $data->image : 'assets/front-end/img/blank.png'}}"></td>  
-              @if(Request::is('admin/members/list/2'))
-              <td> {{ $data->details? $data->details['phone']: 'Null' }}</td>
-              @else
+            
               <td> {{ $data->designation }}</td>
-              @endif
+              
            <td>{{ $data->priority}}</td>
                 <td class="text-center">
-                    <div
-                        class="label {{ $data->status==1 ? 'label-success' : 'label-warning' }}">{{ $data->status == 1 ? 'on' : 'off '}}
-                    </div>
+                    @if ($data->type == 1)
+                    <img style="width: 104px;
+                    height: 102px;
+                    border-radius: 50%;" src="/{{$data->details? $data->details['sec_image'] : 'assets/front-end/img/blank.png'}}"></td>  
+            
+                        @else
+                        <div class="label {{ $data->status==1 ? 'label-success' : 'label-warning' }}">{{ $data->status == 1 ? 'on' : 'off '}}
+                        </div>
+                    @endif
+                   
                 </td>
                 <td>
                     <a href="{{route('members.edit',$data->id)}}">

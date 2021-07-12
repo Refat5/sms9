@@ -59,6 +59,22 @@ class MemberController extends Controller
             $member->permanentAddress = $request->permanentAddress;
             $member->phone = $request->phone;
             $member->period = $request->period;
+            
+                if ($request->hasFile('sec_image')) {
+                    
+                    $extension = $request->file('sec_image')->getClientOriginalExtension();
+                    $name = 'sec_image' . Str::random(5) . '.' . $extension;
+                    $path = "assets/back-end/images/sec_image/";
+                    $request->file('sec_image')->move($path, $name);
+                    $formData = $path . $name;
+                    $formData;
+
+                 }
+                 $member->sec_image = $formData;
+                
+           
+
+            
 
             $member->save();
 
@@ -104,7 +120,14 @@ class MemberController extends Controller
             $request->file('image')->move($path, $name);
             $formData['image'] = $path . $name;
         }
-
+        if ($request->hasFile('sec_image')) {
+            Helper::delete($data->details->sec_image);
+            $extension = $request->file('sec_image')->getClientOriginalExtension();
+            $name = 'sec_image' . Str::random(5) . '.' . $extension;
+            $path = "assets/back-end/images/sec_image/";
+            $request->file('sec_image')->move($path, $name);
+            $formData['sec_image'] = $path . $name;
+        }
         $data->fill($formData)->save();
          if($data->details){
             $data->details->update($formData);

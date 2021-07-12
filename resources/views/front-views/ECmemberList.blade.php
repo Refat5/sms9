@@ -83,6 +83,7 @@
                                     <th>Designation</th>
                                     @elseif(Request::is('list/1'))
                                     <th>Secretary</th>
+                                    <th>Secretary Image</th>
                                     <th>Period</th>
                                     @elseif(Request::is('list/2'))
 
@@ -174,7 +175,7 @@
                                     <td>{{ $member->member_id ? $member->member_id : 'Null' }}</td>
 
                                     @endif
-                                    @if($member->type == 3)
+                                    @if($member->type == 3 )
                                     <td>
                                         {{   $member->name }} <br>
 
@@ -182,10 +183,12 @@
 
                                     </td>
                                     <td>
-                                        <img src="\{{$member->image}}" alt="user" width="100" height="90" style="border-radius: 50%;">
+                                        <img src="/{{$member->image}}" alt="user" width="100" height="90" style="border-radius: 50%;">
 
                                     </td>
                                     @endif
+                                    
+
                                     @if($member->type != 3)
 									<td>
 										<span data-toggle="modal" data-target="#memberModal{{ $member->id }}" class="member-view-details">{{ $member->name }}</span>
@@ -200,6 +203,10 @@
                                        
                                         @endif
                                         @if($member->type == 1)
+                                        <td>
+                                            <img src="/{{ $member->details ? $member->details['sec_image'] : 'assets/front-end/img/blank.png' }}" alt="user" width="100" height="90" style="border-radius: 50%;">
+    
+                                        </td>
                                         <td>
                                             {{ $member->details ? $member->details['period'] : 'null' }}
                                         </td>

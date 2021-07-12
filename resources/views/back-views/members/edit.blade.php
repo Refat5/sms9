@@ -48,14 +48,14 @@
                             
                             <label class="col-12" for="example-text-input" >Priority</label>
                          
-                            <input type="insert Priority" required  class="form-control" id="example-text-input" name="priority" value="{{$members->priority}}" placeholder="insert priority id..">
+                            <input type="number" required  class="form-control" id="example-text-input" name="priority" value="{{$members->priority}}" placeholder="insert priority id..">
                             
                         </div>
                 </div>
                 <div class="form-group" id="member_id">
                     <div class="col-12">
                        <label class="col-12" for="example-text-input">MID</label>
-                       <input type="text"  class="form-control" id="example-text-input" name="member_id" value="{{ $members->member_id }}" placeholder="id..">
+                       <input type="number" class="form-control" id="example-text-input" name="member_id" value="{{ $members->member_id }}" placeholder="id..">
                        
                     </div>
                 </div>
@@ -68,6 +68,12 @@
                          <div class="col-md-12">
                             <label class="col-12" for="example-text-input"> Period</label>
                     <input type="text"  class="form-control" value="{{ $details->period }}"  name="period" placeholder="period..">
+                         </div>
+
+                         <div class="col-md-12">
+                             
+                            <label for="profile_photo" class="control-label">Secretary Image*</label>
+                            <input type="file"  class="form-control" i name="sec_image" value="{{$details->sec_image }}" onchange="readURL(this);">
                          </div>
                     </div>
                   
