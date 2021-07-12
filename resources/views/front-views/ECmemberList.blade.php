@@ -158,7 +158,11 @@
 
             </div>
             <div class="modal-body-heading">
+                @if(Request::is('list/1'))
+                Secretary
+                @else
                 Designation
+                @endif
             </div>
             <div>{{ $member->designation }}</div>
         </div>

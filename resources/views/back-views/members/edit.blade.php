@@ -48,7 +48,7 @@
                             
                             <label class="col-12" for="example-text-input" >Priority</label>
                          
-                            <input type="insert Priority"  class="form-control" id="example-text-input" name="priority" value="{{$members->priority}}" placeholder="insert priority id..">
+                            <input type="insert Priority" required  class="form-control" id="example-text-input" name="priority" value="{{$members->priority}}" placeholder="insert priority id..">
                             
                         </div>
                 </div>

@@ -30,6 +30,9 @@
             <th>Picture</th>
             @if(Request::is('admin/members/list/2'))
             <th>Phone</th>
+            @endif
+            @if(Request::is('admin/members/list/1'))
+            <th>Secretary</th>
             @else
             <th>Designtion</th>
             @endif

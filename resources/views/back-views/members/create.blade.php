@@ -51,7 +51,7 @@
                             
                             <label class="col-12" for="example-text-input" >Priority</label>
                          
-                            <input type="insert Priority"  class="form-control" id="example-text-input" name="priority" placeholder="insert Priority..">
+                            <input type="insert Priority"  value="1" class="form-control" id="example-text-input" name="priority" placeholder="insert Priority..">
                             
                         </div>
                 </div>
