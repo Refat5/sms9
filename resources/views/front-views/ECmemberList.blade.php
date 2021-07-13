@@ -189,10 +189,13 @@
                                     @endif
                                     
 
-                                    @if($member->type != 3)
+                                    @if($member->type != 3 && $member->type !=1)
 									<td>
 										<span data-toggle="modal" data-target="#memberModal{{ $member->id }}" class="member-view-details">{{ $member->name }}</span>
 									</td>
+                                    @elseif($member->type == 1)
+                                    <td>   <img src="/{{$member->image}}" alt="user" width="100" height="90" style="border-radius: 50%;">
+                                    </td>
                                     @endif
 								
                                         @if($member->type == 0 || $member->type == 1 )

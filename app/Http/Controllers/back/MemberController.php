@@ -126,8 +126,12 @@ class MemberController extends Controller
             $name = 'sec_image' . Str::random(5) . '.' . $extension;
             $path = "assets/back-end/images/sec_image/";
             $request->file('sec_image')->move($path, $name);
-            $formData['sec_image'] = $path . $name;
+            $secimg = $path . $name;
+            
+            $data->details->sec_image = $secimg;
         }
+     
+                
         $data->fill($formData)->save();
          if($data->details){
             $data->details->update($formData);

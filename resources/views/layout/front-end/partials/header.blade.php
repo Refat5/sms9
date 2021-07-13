@@ -1,21 +1,40 @@
 <!-- Header Area -->
 <header class="header_area">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<a class="navbar-brand" href="/">
+				<img src="{{ asset('assets/front-end/img/logo.jpg')}}" alt="">
+		
+			</a>
+			</div>
+			
+				<div class="">
+					<center class="" style="">
+						<h3 style="color: #215f42;">SAMS 92</h3>
+						<p style="color: #222121; font-family: system-ui;">Ex Student Association of Malikanda Meghula School 92</p>
+						<div class="logo-slogan" style="  width: 267px;
+						font-size: 102%;
+						font-family: system-ui;
+						color: rgb(90 75 75);">
+							
+							@php($config=\App\Helpers\Helper::get_app_settings('appAddress'))
+							<strong style="width: 23px;">{{ $config['name'] }}</strong>
+						
+						</div>
+					</center>
+				</div>
+			
+		</div>
+		
+	
+	
+	
+</div>
 	<div class="main_menu">
 		<nav class="navbar navbar-expand-lg navbar-light">
 			<div class="container-fluid">
-
-				<a class="navbar-brand" href="/">
-					<img src="{{ asset('assets/front-end/img/logo.jpg')}}" alt="">
-				
-				</a>
-                <div class="logo-slogan" style="width: 195px;
-                font-size: 114%;
-                color: rgb(34, 33, 33);">
-                    
-                    @php($config=\App\Helpers\Helper::get_app_settings('appAddress'))
-                    <strong style="width: 23px;">{{ $config['name'] }}</strong>
-                
-                </div>
+               
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -23,7 +42,7 @@
 				</button>
 
 				<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-					<ul class="nav navbar-nav menu_nav justify-content-end">
+					<ul class="nav navbar-nav menu_nav justify-content-center">
 						<li class="nav-item {{Request::is('/')?'active':''}}"><a class="nav-link" href="/"><i class="fa fa-home mr-1"></i>Home</a></li>
 						<li class="nav-item {{Request::is('contact/home')?'active':''}}"><a class="nav-link" href="{{ route('contact.home') }}">Contact</a></li>
 						<li class="nav-item {{Request::is('list/0')?'active':''}}"><a class="nav-link" href="{{ route('memberList',[0]) }}">Executive Committee</a></li>
