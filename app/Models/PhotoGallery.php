@@ -13,6 +13,7 @@ class PhotoGallery extends Model
     protected $fillable = [
         'title',
         'image',
+        'prority',
 
     ];
 }

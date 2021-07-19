@@ -14,8 +14,8 @@
 <section class="banner_area">
 	<div class="banner_inner d-flex align-items-center">
 		<div class="container">
-			<div class="banner_content text-right">
-				<h1>Social Activities</h1>
+			<div class="banner_content text-right ">
+				<h3 class="text-light">Social Activities</h3>
 				<div class="page_link">
 					<a href="/">Home</a>
 					<a href="javascript:void(0)">Social Activities</a>
@@ -30,7 +30,7 @@
 		<div class="row">
 			<div class="col-md-12 m-auto">
 				<div class="row">
-                    @php($socialActivites = \App\Models\SocialActivites::orderBy('id','desc')->where('status', 1)->get())
+                    @php($socialActivites = \App\Models\SocialActivites::orderBy('prority','asc')->where('status', 1)->get())
                     @foreach ($socialActivites as $socialActivite )
                     <div class="col-md-6">
 						<div class="social-activites-content mb-5">

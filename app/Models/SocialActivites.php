@@ -14,6 +14,7 @@ class SocialActivites extends Model
         'title',
         'image',
         'description',
+        'prority',
 
     ];
 }

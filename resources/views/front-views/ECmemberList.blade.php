@@ -13,15 +13,15 @@
 <section class="banner_area">
 	<div class="banner_inner d-flex align-items-center">
 		<div class="container">
-			<div class="banner_content text-right">
+			<div class="banner_content text-right text-light">
                 @if(Request::is('list/0'))
-				<h1>Executive Committee</h1>
+				<h3>Executive Committee</h3>
                 @elseif(Request::is('list/1'))
-                <h1>Honor Board</h1>
+                <h3>Honor Board</h3>
                 @elseif(Request::is('list/2'))
-                <h1>Members</h1>
+                <h3>Members</h3>
                 @elseif(Request::is('list/3'))
-                <h1>Donor</h1>
+                <h3>Donor</h3>
                 @endif
 				<div class="page_link">
 					<a href="/">Home</a>
@@ -74,7 +74,8 @@
                                         <th>Photo</th>
 
                                         @elseif(Request::is('list/1'))
-                                        <th>President</th>
+                                        <th>President Name</th>
+                                        <th>President Img</th>
                                         @else
                                         <th>Name</th>
                                     @endif
@@ -83,7 +84,7 @@
                                     <th>Designation</th>
                                     @elseif(Request::is('list/1'))
                                     <th>Secretary</th>
-                                    <th>Secretary Image</th>
+                                    <th>Secretary Img</th>
                                     <th>Period</th>
                                     @elseif(Request::is('list/2'))
 
@@ -125,6 +126,7 @@
                     
                 @endif
                 @if(Request::is('list/2'))
+                @if($member->details)
                 <strong>Father Name : </strong> {{ $member->details['father'] }} <br>
 
                 <strong>Mother Name : </strong> {{  $member->details['mother'] }} <br>
@@ -154,6 +156,7 @@
       
                     {{  $member->details['email'] }}
                 </div>
+                @endif
                 @endif
                 
 
@@ -194,6 +197,8 @@
 										<span data-toggle="modal" data-target="#memberModal{{ $member->id }}" class="member-view-details">{{ $member->name }}</span>
 									</td>
                                     @elseif($member->type == 1)
+                                    <td>   {{$member->name}}
+                                    </td>
                                     <td>   <img src="/{{$member->image}}" alt="user" width="100" height="90" style="border-radius: 50%;">
                                     </td>
                                     @endif

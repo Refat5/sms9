@@ -29,6 +29,14 @@
                         <input type="text"  class="form-control" id="example-text-input" name="title" placeholder="Text..">
                         
                     </div>
+                    <div class="col-md-12">
+                          
+                            
+                        <label class="col-12" for="example-text-input" >Priority</label>
+                     
+                        <input type="number" required  value="1" class="form-control" id="example-text-input" name="prority" placeholder="insert Priority..">
+                        
+                    </div>
                 </div>
              
            

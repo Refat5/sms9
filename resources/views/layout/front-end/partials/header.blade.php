@@ -10,16 +10,17 @@
 			</div>
 			
 				<div class="">
-					<center class="" style="">
-						<h3 style="color: #215f42;">SAMS 92</h3>
-						<p style="color: #222121; font-family: system-ui;">Ex Student Association of Malikanda Meghula School 92</p>
-						<div class="logo-slogan" style="  width: 267px;
+					<center class="mt-2" style="">
+						<h1 style="color: #215f42;     font-size: 3rem;">SAMS 92</h1>
+						<h6 style="color: #222121; font-family: system-ui;">Ex Student Association of Malikanda Meghula School 92</h6>
+						<div class="logo-slogan" style=" width: 320px;
 						font-size: 102%;
 						font-family: system-ui;
 						color: rgb(90 75 75);">
 							
 							@php($config=\App\Helpers\Helper::get_app_settings('appAddress'))
-							<strong style="width: 23px;">{{ $config['name'] }}</strong>
+							<strong style="width: 23px;">Malikanda, Meghula, Dohar, Dhaka, Bangladesh <br>
+								 Gov. Reg. No: Da-09423</strong>
 						
 						</div>
 					</center>

@@ -31,7 +31,7 @@
                             
                             <label class="col-12" for="example-text-input" id="Name"  style="  display: contents;">Name</label>
                          
-                            <input type="text"  class="form-control" id="example-text-input" name="name" placeholder="Text..">
+                            <input type="text" required class="form-control" id="example-text-input" name="name" placeholder="Text..">
                             
                         </div>
                     
@@ -51,7 +51,7 @@
                             
                             <label class="col-12" for="example-text-input" >Priority</label>
                          
-                            <input type="number"  value="1" class="form-control" id="example-text-input" name="priority" placeholder="insert Priority..">
+                            <input type="number" required  value="1" class="form-control" id="example-text-input" name="priority" placeholder="insert Priority..">
                             
                         </div>
                 </div>
@@ -68,7 +68,7 @@
                            
                              <div class="col-md-12">
                                 <label class="col-12" for="example-text-input"> Period</label>
-                        <input type="text"  class="form-control"   name="period" placeholder="period..">
+                        <input type="text"   class="form-control"   name="period" placeholder="period..">
                              </div>
                              <div class="col-md-12">
                                 <label for="profile_photo" class="control-label">Secretary Image*</label>
@@ -127,7 +127,7 @@
                     <label class="col-12" for="example-text-input" id="designation"  style="display: block;">Designation</label>
                     <label class="col-12" for="example-text-input" id="secretary" style="display: none;"> Secretary</label>
 
-                    <input type="text"  class="form-control" id="example-text-input" name="designation" placeholder="Text..">
+                    <input type="text" required class="form-control" id="example-text-input" name="designation" placeholder="Text..">
                     
                  </div>
              </div>

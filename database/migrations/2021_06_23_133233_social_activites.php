@@ -18,6 +18,7 @@ class SocialActivites extends Migration
             $table->string('title')->nullable();
             $table->string('image')->nullable();
             $table->text('description')->nullable();
+            $table->integer('prority')->default(10);
 
             $table->integer('status')->default(1);
             $table->timestamps();

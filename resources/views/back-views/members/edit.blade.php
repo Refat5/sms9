@@ -125,7 +125,7 @@
                 <div class="form-group">
                     <div class="col-12">
                        <label class="col-12" for="example-text-input">Designation</label>
-                       <input type="text"  class="form-control" id="example-text-input" name="designation" value="{{ $members->designation }}" placeholder="Text..">
+                       <input type="text" required  class="form-control" id="example-text-input" name="designation" value="{{ $members->designation }}" placeholder="Text..">
                        
                     </div>
                 </div>

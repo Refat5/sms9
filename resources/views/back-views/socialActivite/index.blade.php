@@ -17,7 +17,7 @@
             <th>Title</th>
      
             <th>Picture</th>
-           
+           <th>Prority</th>
             <th>Status</th>
             <th>Action</th>
         </tr>
@@ -34,7 +34,8 @@
                     
                     
                 </td>
-              
+                   
+           <td>{{ $data->prority}}</td>
                 <td class="text-center">
                     <div
                         class="label {{ $data->status==1 ? 'label-success' : 'label-warning' }}">{{ $data->status == 1 ? 'on' : 'off '}}

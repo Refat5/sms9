@@ -13,8 +13,8 @@
 <section class="banner_area">
 	<div class="banner_inner d-flex align-items-center">
 		<div class="container">
-			<div class="banner_content text-right">
-				<h1>Photo Gallery</h1>
+			<div class="banner_content text-right text-light">
+				<h3>Photo Gallery</h3>
 				<div class="page_link">
 					<a href="/">Home</a>
 					<a href="javascript:void(0)">Photo Gallery</a>
@@ -43,7 +43,7 @@
         </div>
 		<div class="portfolio">
 	
-                    @php($photos = \App\Models\PhotoGallery::orderBy('id','desc')->where('status',1)->get())
+                    @php($photos = \App\Models\PhotoGallery::orderBy('prority','asc')->where('status',1)->get())
             @foreach ($photos as $photo)
             <a href="javascript:void(0)" class="card pop">
 			    <div class="image">

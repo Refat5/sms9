@@ -30,6 +30,14 @@
                         <input type="text"  class="form-control" value="{{ $socialActivite->title }}" id="example-text-input" name="title" placeholder="Text..">
                         
                     </div>
+                    <div class="col-md-12">
+                          
+                            
+                        <label class="col-12" for="example-text-input" >Priority</label>
+                     
+                        <input type="number" required  class="form-control" id="example-text-input" name="prority" value="{{$socialActivite->prority}}" placeholder="insert priority id..">
+                        
+                    </div>
                 </div>
              
            
@@ -38,6 +46,7 @@
                     <div class="col-12">
                         <textarea class="form-control" id="editor" value="{{ $socialActivite->description }}" name="description" rows="6" placeholder="Content.."> {!! $socialActivite->description !!}</textarea>
                     </div>
+
                 </div>
                
             

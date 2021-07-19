@@ -1,7 +1,7 @@
 @extends('layout.front-end.app')
 @section('content')
 <section class="banner-area owl-carousel" id="home">
-    @php($banners=\App\Models\Slider::where('status',1)->orderBy('id','desc')->get())
+    @php($banners=\App\Models\Slider::where('status',1)->orderBy('prority','asc')->get())
     @foreach ( $banners as $key=>$banner )
     <div class="single_slide_banner slide_bg1">
         <img src="/{{ $banner->image }}">
@@ -47,7 +47,7 @@
 		<div class="portfolio">
             
 	
-                    @php($photos = \App\Models\PhotoGallery::orderBy('id','desc')->where('status',1)->take(8)->get())
+                    @php($photos = \App\Models\PhotoGallery::orderBy('prority','asc')->where('status',1)->take(8)->get())
             @foreach ($photos as $photo)
             <a href="javascript:void(0)" class="card pop">
 			    <div class="image" style=" padding:46px;">

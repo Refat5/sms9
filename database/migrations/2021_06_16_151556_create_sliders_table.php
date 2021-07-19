@@ -18,6 +18,8 @@ class CreateSlidersTable extends Migration
             $table->string('title')->nullable();
             $table->string('image')->nullable();
             $table->integer('status')->default(0);
+            $table->integer('prority')->default(10);
+
             $table->text('description')->nullable();
             $table->timestamps();
         });

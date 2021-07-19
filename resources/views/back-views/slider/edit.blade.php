@@ -30,6 +30,14 @@
                         <input type="text"  class="form-control" value="{{ $slider->title }}" id="example-text-input" name="title" placeholder="Text..">
                         
                     </div>
+                    <div class="col-md-12">
+                          
+                            
+                        <label class="col-12" for="example-text-input" >Priority</label>
+                     
+                        <input type="number" required  class="form-control" id="example-text-input" name="prority" value="{{$slider->prority}}" placeholder="insert priority id..">
+                        
+                    </div>
                 </div>
              
            
